@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -17,9 +16,17 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
             font-family: 'Lato', sans-serif;
+        }
+
+        main {
+            margin-top: 50px;
         }
 
         #showcase { 
@@ -44,11 +51,6 @@
         .main-header {
             background-color: #FC997C;
             padding: 8px 16px;
-            position: fixed;
-            z-index: 1;
-            
-            width: 100%;
-            top: 0;
         }
 
         .main-nav {
@@ -66,6 +68,13 @@
         .main-nav__item {
             display: inline-block;
             margin: 0 10px;
+        }
+
+        .main-header {
+            position: fixed;
+            z-index: 1;
+            width: 100%;
+            top: 0;
         }
 
         .main-header__logo {
@@ -208,6 +217,22 @@
             margin: 0 auto;
             width: 1000px;
         }
+
+        #backtotop {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        #backtotop i {
+            color: #FC997C;
+            font-size: 45px;
+            transition: color .6s;
+        }
+
+        #backtotop i:hover {
+            color:#fb6537;
+        }
         
     </style>
 </head>
@@ -329,7 +354,9 @@
         </section>
     </main>
 
-    <a href="#body" ><i class="fa-regular fa-arrow-up-from-arc"></i></a>
+    <a href="#body" id="backtotop">
+        <i class="fas fa-chevron-circle-up"></i>
+    </a>
 
 </body>
 </html>
